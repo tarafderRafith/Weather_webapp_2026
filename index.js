@@ -6,7 +6,7 @@ const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
 
-    const APIKey = 'f92d05be08f89a4918740458fac2639d'; // <-- Replace with your own API key
+    const APIKey = 'f92d05be08f89a4918740458fac2639d'; 
     const city = document.querySelector('.search-box input').value.trim();
 
     if (city === '') return;
@@ -15,9 +15,9 @@ search.addEventListener('click', () => {
         .then(response => response.json())
         .then(json => {
 
-            console.log(json); // Check the API response in Console
+            console.log(json); 
 
-            // Error handling
+            
             if (json.cod == 404 || json.cod == "404") {
                 container.style.height = '400px';
                 weatherBox.style.display = 'none';
